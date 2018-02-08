@@ -1,8 +1,8 @@
 #!/bin/bash
 
-module () {
-    eval `/usr/bin/modulecmd bash $*`
-}
+#module () {
+#    eval `/usr/bin/modulecmd bash $*`
+#}
 
 export HPCTK_HOME=/tools_shared/hpctk
 export HPCTK_BIN=$HPCTK_HOME/bin
@@ -21,7 +21,7 @@ else
  MODULEPATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{MODULEPATH}))')"
 fi
 
-export APPS_SHARED=/mnt/opt/Centos6.4
+export APPS_SHARED=/mnt/opt/
 export APPS_MODULES=$APPS_SHARED/modulefiles
 
 alias ssh="ssh -X"
@@ -31,11 +31,4 @@ module load mdtk
 
 #REMOVE DUPLICATES FROM PATH
 PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
-
-#ENABLE LATEST VERSION OF GIT IF AVAILABLE
-if [ -e /opt/rh/rh-git29/enable ]
-then
- :
- source /opt/rh/rh-git29/enable
-fi
 
