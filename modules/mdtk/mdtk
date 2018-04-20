@@ -17,8 +17,7 @@ module-whatis "This module loads the Model Dev Tool Kit; this is a tool kit to h
 conflict mdtk/mddev
 
 #Set Variables Internally in this Script
-set mdtk_home $env(TOOLS_SHARED)/mdtk
-#set mdtk_home "$::env{$TOOLS_SHARED}/mdtk"
+set mdtk_home $env(TK_BASE)/mdtk
 set mdtk_bin "$mdtk_home/bin"
 #set mdtk_lib "$mdtk_home/lib"
 #set mdtk_coupled_data "$mdtk_home/coupled_data"
@@ -37,6 +36,9 @@ setenv MDTK_SCRIPTS "$mdtk_scripts"
 setenv MDTK_OWNER "$mdtk_owner"
 setenv USER_EMAIL "$user_email"
 
+#Other Tool Kits
+#setenv TK_BASE "/mnt/gpfs/backup"
+
 #Set Binary Paths
 prepend-path PATH "$mdtk_bin/sh"
 
@@ -44,30 +46,12 @@ prepend-path PATH "$mdtk_bin/sh"
 
 ###Setup MDEVWS Infrastructure###
 
-#set ccws_home "$::env(APPS_SHARED)/HPC/ccws"
-#set ccws_live "$::env(APPS_SHARED)/ccws-live"
-#set ccws_test "$::env(APPS_SHARED)/ccws-test"
-#set ccws_data "$::env(DATA_SHARED)/ccws"
-#set ccws_bin "$ccws_home/bin"
-
-#setenv CCWS_HOME "$ccws_home"
-#setenv CCWS_LIVE "$ccws_live"
-#setenv CCWS_TEST "$ccws_test"
-#setenv CCWS_DATA "$ccws_data"
-#setenv CCWS_BIN "$ccws_bin"
-
-#Set Binary Paths
-#prepend-path PATH "$ccws_bin/sh"
-
 #Queue Data
-set intensive_q "gamess.q"
-set unintensive_q "all.q"
-set vs_q "vs.q"
-set gpu_q "gpu.q"
-
 setenv INTENSIVE_Q "long.q"
 setenv UNINTENSIVE_Q "long.q"
-setenv GPU_Q "gpuflood.q"
+setenv GPU_Q "gpu.q"
+setenv SURGE_Q "long.q"
+setenv CATRESP_Q "long.q"
 
 #Scratch
 setenv SCRATCH_DIR "/scratch/"

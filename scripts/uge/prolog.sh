@@ -15,6 +15,8 @@ echo "SGE_TASK_ID=${SGE_TASK_ID}"
 echo "SGE_O_WORKDIR=${SGE_O_WORKDIR}"
 echo "SGE_O_HOME=${SGE_O_HOME}"
 echo "HOSTNAME=${HOSTNAME}"
+echo "PE_HOSTFILE=`cat $PE_HOSTFILE`"
+echo "PE_SLOTS=$PE_SLOTS"
 
 echo "---End Prolog Script---"
 
