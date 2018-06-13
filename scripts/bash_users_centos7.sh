@@ -82,9 +82,9 @@ fi
 #source /mnt/opt/sge/ge-8.5.5/default/common/settings.sh
 #fi
 
-if [ -e /mnt/opt/sge/ge-8.5.4/default/common/settings.sh ]
+if [ -e /mnt/opt/sge/uge-8.5.5/default/common/settings.sh ]
 then
  :
-source /mnt/opt/sge/ge-8.5.4/default/common/settings.sh
+source /mnt/opt/sge/uge-8.5.5/default/common/settings.sh
 fi
 
