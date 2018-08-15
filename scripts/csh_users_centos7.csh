@@ -43,7 +43,7 @@ set MODULEPATH=(`echo $MODULEPATH | tr ' ' '\n' | sort | uniq | tr '\n' ' '`)
 #setenv PATH "$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
 set PATH=(`echo $PATH | tr ' ' '\n' | sort | uniq | tr '\n' ' '`)
 
-alias ssh "ssh -X"
+#alias ssh "ssh -X"
 alias vi vim
 #shopt -s direxpand
 

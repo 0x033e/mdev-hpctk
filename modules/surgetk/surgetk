@@ -20,14 +20,16 @@ prereq mdtk
 #Set Variables Internally in this Script
 set surgetk_home $env(TK_BASE)/surge/surgetk
 set surgetk_bin "$surgetk_home/bin"
-set surgetk_scripts "$surgetk_home/scripts"
 set surgetk_owner "surge"
 
 # Export Variables to Enviroment
 setenv SURGETK_HOME "$surgetk_home"
 setenv SURGETK_BIN "$surgetk_bin"
-setenv SURGETK_SCRIPTS "$surgetk_scripts"
+setenv SURGETK_SCRIPTS "$surgetk_home/scripts"
 setenv SURGETK_OWNER "$surgetk_owner"
+setenv SURGETK_DATA "$surgetk_home/data"
+setenv SURGETK_PLATFORMS "$surgetk_home/platforms"
+setenv SURGETK_TESTING "$surgetk_home/testing"
 
 #Set Binary Paths
 prepend-path PATH "$surgetk_bin/sh"

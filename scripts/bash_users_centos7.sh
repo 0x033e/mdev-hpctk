@@ -45,7 +45,7 @@ MODULEPATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{
 #REMOVE DUPLICATES FROM PATH
 PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
 
-alias ssh="ssh -X"
+#alias ssh="ssh -X"
 alias vi=vim
 shopt -s direxpand
 

@@ -25,7 +25,7 @@ fi
 export APPS_SHARED=/mnt/opt/Centos6.4
 export APPS_MODULES=$APPS_SHARED/modulefiles
 
-alias ssh="ssh -X"
+#alias ssh="ssh -X"
 alias vi=vim
 
 module load mdtk
