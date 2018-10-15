@@ -27,7 +27,7 @@ conflict surgetk
 #requires mdtk
 
 #Set Variables Internally in this Script
-set surgetk_home $::env(HOME)/git/tk_base/surgetk
+set surgetk_home "$::env(HOME)/git/tk_base/surgetk"
 set surgetk_bin "$surgetk_home/bin"
 set surgetk_owner "surge"
 
@@ -39,6 +39,7 @@ setenv SURGETK_OWNER "$surgetk_owner"
 setenv SURGETK_DATA "$surgetk_home/data"
 setenv SURGETK_PLATFORMS "$surgetk_home/platforms"
 setenv SURGETK_TESTING "$surgetk_home/testing"
+setenv SURGETK_COMMON "$env(TK_BASE)/surge/common-minimal"
 
 #Set Binary Paths
 prepend-path PATH "$surgetk_bin/sh"

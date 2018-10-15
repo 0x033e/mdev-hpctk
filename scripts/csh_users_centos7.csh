@@ -76,8 +76,8 @@ endif
  #source /opt/rh/rh-git29/enable
 #endif
 
-if ( -e /mnt/opt/sge/uge-8.5.5/default/common/settings.sh ) then
+if ( -e /mnt/opt/sge/uge-8.6.2/default/common/settings.sh ) then
  :
- source /mnt/opt/sge/uge-8.5.5/default/common/settings.csh
+ source /mnt/opt/sge/uge-8.6.2/default/common/settings.csh
 endif
 
