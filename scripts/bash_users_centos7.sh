@@ -65,7 +65,7 @@ USER_STRING=`id $USER`
 if [ -e /opt/rh/devtoolset-7/enable ]
 then
  :
- source /opt/rh/devtoolset-7/enable
+ #source /opt/rh/devtoolset-7/enable
  alias sudo=/usr/bin/sudo
 fi
 

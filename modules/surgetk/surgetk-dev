@@ -14,24 +14,20 @@ set     version      "1.0"
 
 module-whatis "This module loads the Surge Tool Kit Development; this is a tool kit to help Surge Group members to Develop Surge Scripts"
 
-#----------------------------------------------------------------------
-#git commands
-set-alias surgetk_get_git   "mkdir -p $::env(HOME)/git/tk_base/surgetk; cd $::env(HOME)/git/tk_base/surgetk; git clone git@github.com:RMS/surgetk.git $::env(HOME)/git/tk_base/surgetk" 
-#puts stderr "Developer Mode"
-puts stderr "Use command surgetk_get_git to download Surge - Development Kit to $::env(HOME)/git/tk_base/surgetk; Enviroment Variables setup from here"
-
-#----------------------------------------------------------------------
-
-
 conflict surgetk
 #requires mdtk
 
+
 #Set Variables Internally in this Script
-set surgetk_home "$::env(HOME)/git/tk_base/surgetk"
+set surgetk_tag "surge"
+set surgetk_home "$env(TK_BASE)/$surgetk_tag/$env(USER)/surgetk"
+#set surgetk_home "$::env(HOME)/git/tk_base/surgetk"
 set surgetk_bin "$surgetk_home/bin"
 set surgetk_owner "surge"
 
+
 # Export Variables to Enviroment
+setenv SURGETK_TAG "$surgetk_tag"
 setenv SURGETK_HOME "$surgetk_home"
 setenv SURGETK_BIN "$surgetk_bin"
 setenv SURGETK_SCRIPTS "$surgetk_home/scripts"
@@ -39,8 +35,19 @@ setenv SURGETK_OWNER "$surgetk_owner"
 setenv SURGETK_DATA "$surgetk_home/data"
 setenv SURGETK_PLATFORMS "$surgetk_home/platforms"
 setenv SURGETK_TESTING "$surgetk_home/testing"
+
 setenv SURGETK_COMMON "$env(TK_BASE)/surge/common-minimal"
+
+setenv SURGETK_USER "$env(TK_BASE)/$surgetk_tag/$env(USER)"
+
 
 #Set Binary Paths
 prepend-path PATH "$surgetk_bin/sh"
 
+#----------------------------------------------------------------------
+#git commands
+set-alias surgetk_get_git   "mkdir -p $surgetk_home; cd $surgetk_home; git clone git@github.com:RMS/surgetk.git $surgetk_home" 
+#puts stderr "Developer Mode"
+puts stderr "Use command surgetk_get_git to download Surge - Development Kit to $surgetk_home; Enviroment Variables setup from here"
+
+#----------------------------------------------------------------------

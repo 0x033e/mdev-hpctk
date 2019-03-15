@@ -18,8 +18,8 @@ conflict surgetk
 prereq mdtk
 
 #Set Variables Internally in this Script
-set surgetk_tag "surge"
-set surgetk_home $env(TK_BASE)/surge/surgetk
+set surgetk_tag "catresp"
+set surgetk_home $env(TK_BASE)/catresp/surgetk
 set surgetk_bin "$surgetk_home/bin"
 set surgetk_owner "surge"
 
