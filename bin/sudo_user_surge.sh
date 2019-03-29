@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/bin/sudo $HPCTK_SCRIPTS/sudo/user_surge.sh
+/usr/bin/sudo /mnt/opt/hpctk/scripts/sudo/user_surge.sh

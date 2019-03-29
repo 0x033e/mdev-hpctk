@@ -93,6 +93,6 @@ fi
 if [ -e /mnt/opt/sge/uge-8.6.2/default/common/settings.sh ]
 then
  :
-source /mnt/opt/sge/uge-8.6.2/default/common/settings.sh
+ source /mnt/opt/sge/uge-8.6.2/default/common/settings.sh
 fi
 
