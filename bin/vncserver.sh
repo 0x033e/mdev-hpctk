@@ -23,6 +23,8 @@ if [ ! -e $HOME/vncserverNumber.txt ]; then
  grep -E -o ".{0,0}:.{0,3}"  $HOME/vncserver.txt | cut -f1 -d " " | head -n 1 > $HOME/vncserverNumber.txt
  sed -i 's/\.//' $HOME/vncserverNumber.txt
  sed -i 's/[[:alpha:].-]//g' $HOME/vncserverNumber.txt
+else
+ echo "VNCSERVER ALREADY EXISTS; DOING NOTHING"
 fi
 
 
