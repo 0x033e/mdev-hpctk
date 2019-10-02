@@ -65,7 +65,7 @@ USER_STRING=`id $USER`
 if [ -e /opt/rh/devtoolset-7/enable ]
 then
  :
- #source /opt/rh/devtoolset-7/enable
+ source /opt/rh/devtoolset-7/enable
  alias sudo=/usr/bin/sudo
 fi
 
@@ -81,7 +81,7 @@ fi
 if [ -e /opt/rh/rh-git29/enable ]
 then
  :
- source /opt/rh/rh-git29/enable
+ #source /opt/rh/rh-git29/enable
 fi
 
 #if [ -e /mnt/opt/sge/ge-8.5.4/default/common/settings.sh ]
@@ -90,9 +90,9 @@ fi
 # source /mnt/opt/sge/ge-8.5.4/default/common/settings.sh
 #fi
 
-if [ -e /mnt/opt/sge/uge-8.6.2/default/common/settings.sh ]
+if [ -e /mnt/opt/sge/uge-8.6.5/default/common/settings.sh ]
 then
  :
- source /mnt/opt/sge/uge-8.6.2/default/common/settings.sh
+ source /mnt/opt/sge/uge-8.6.5/default/common/settings.sh
 fi
 

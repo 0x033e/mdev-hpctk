@@ -17,7 +17,7 @@ module-whatis "This module loads the WindTC Tool Kit Development; this is a tool
 
 #----------------------------------------------------------------------
 #git commands
-set-alias windtctk_get_git   "mkdir -p $env(TK_BASE)/nahu/$env(USER)/windtctk; cd $env(TK_BASE)/nahu/$env(USER)/windtctk; git clone git@github.com:RMS/windtctk.git $env(TK_BASE)/nahu/$env(USER)/windtctk" 
+set-alias windtctk_get_git   "mkdir -p $env(TK_BASE)/nahu/$env(USER)/windtctk; cd $env(TK_BASE)/nahu/$env(USER)/windtctk; git clone git@github.com:RMS/mdev-windtctk.git $env(TK_BASE)/nahu/$env(USER)/windtctk" 
 #puts stderr "Developer Mode"
 puts stderr "Use command windtctk_get_git to download WindTC - Development Kit to $env(TK_BASE)/nahu/$env(USER)/windtctk; Enviroment Variables setup from here"
 #----------------------------------------------------------------------
@@ -29,7 +29,7 @@ prereq mdtk
 
 
 #Set Variables Internally in this Script
-set windtctk_home "$env(TK_BASE)/wind/users/$env(USER)/windtctk"
+set windtctk_home "$env(TK_BASE)/nahu/$env(USER)/windtctk"
 set windtctk_owner "Enrica"
 
 
@@ -43,7 +43,7 @@ setenv WINDTCTK_DATA "$windtctk_home/data"
 setenv WINDTCTK_PLATFORMS "$windtctk_home/platforms"
 setenv WINDTCTK_TESTING "$windtctk_home/testing"
 setenv WINDTCTK_OWNER "$windtctk_owner"
-setenv WINDTCTK_USER "$env(TK_BASE)/wind/users/$env(USER)"
+setenv WINDTCTK_USER "$env(TK_BASE)/nahu/$env(USER)"
 
 #Set Binary Paths
 prepend-path PATH "$windtctk_home/run"

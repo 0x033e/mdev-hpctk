@@ -34,7 +34,7 @@ setenv WINDTCTK_DATA "$windtctk_home/data"
 setenv WINDTCTK_PLATFORMS "$windtctk_home/platforms"
 setenv WINDTCTK_TESTING "$windtctk_home/testing"
 setenv WINDTCTK_OWNER "$windtctk_owner"
-setenv WINDTCTK_USER "$env(TK_BASE)/wind/users/$env(USER)"
+setenv WINDTCTK_USER "$env(TK_BASE)/nahu/$env(USER)"
 
 #Set Binary Paths
 prepend-path PATH "$windtctk_home/run"
