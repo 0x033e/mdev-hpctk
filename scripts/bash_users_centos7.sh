@@ -65,8 +65,20 @@ USER_STRING=`id $USER`
 if [ -e /opt/rh/devtoolset-7/enable ]
 then
  :
- source /opt/rh/devtoolset-7/enable
- alias sudo=/usr/bin/sudo
+ if [[ $EUID -ne 0 ]]; then
+   #echo "NORMAL USER"
+   source /opt/rh/devtoolset-7/enable
+   alias sudo=/usr/bin/sudo
+ else
+   if [[ $- =~ "i" ]]; then :
+     #echo "INTERACTIVE ROOT SESSION"
+     source /opt/rh/devtoolset-7/enable
+     alias sudo=/usr/bin/sudo
+   else
+      :
+      #echo "NON INTERACTIVE ROOT SESSION" 
+   fi
+ fi
 fi
 
 if [ -e /opt/rh/rh-nodejs8/enable ]
