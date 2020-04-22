@@ -20,7 +20,7 @@ prereq mdtk
 
 
 #Set Variables Internally in this Script
-set windtctk_home $env(TK_BASE)/nahu/windtctk
+set windtctk_home $env(TK_BASE)/windtc/windtctk
 set windtctk_owner "Enrica"
 
 
@@ -34,7 +34,7 @@ setenv WINDTCTK_DATA "$windtctk_home/data"
 setenv WINDTCTK_PLATFORMS "$windtctk_home/platforms"
 setenv WINDTCTK_TESTING "$windtctk_home/testing"
 setenv WINDTCTK_OWNER "$windtctk_owner"
-setenv WINDTCTK_USER "$env(TK_BASE)/nahu/$env(USER)"
+setenv WINDTCTK_USER "$env(TK_BASE)/windtc/$env(USER)"
 
 #Set Binary Paths
 prepend-path PATH "$windtctk_home/run"

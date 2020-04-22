@@ -24,6 +24,7 @@ set surgetk_home "$env(TK_BASE)/$surgetk_tag/$env(USER)/surgetk"
 #set surgetk_home "$::env(HOME)/git/tk_base/surgetk"
 set surgetk_bin "$surgetk_home/bin"
 set surgetk_owner "surge"
+set surgetk_common "$env(TK_BASE)/surge/common-minimal"
 
 
 # Export Variables to Enviroment
@@ -37,6 +38,7 @@ setenv SURGETK_PLATFORMS "$surgetk_home/platforms"
 setenv SURGETK_TESTING "$surgetk_home/testing"
 
 setenv SURGETK_COMMON "$env(TK_BASE)/surge/common-minimal"
+setenv SURGETK_CATDATA "$surgetk_common/CatResp_SetupFiles"
 
 setenv SURGETK_USER "$env(TK_BASE)/$surgetk_tag/$env(USER)"
 
