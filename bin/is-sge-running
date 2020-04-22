@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Simple script to send an email if the sge_qmaster service doesnt appear to be running
+# S.Rhoods 04/06/19
+#
+
+email_list="ddrayton@rms.com rrobinson@rms.com srhoods@rms.com csandiri@rms.com"
+message="UGE/SGE Master service not running on "`hostname`" please investigate and restart if required."
+
+i=`ps -eaf|grep sge_qmaster|grep sgeadmin`
+
+if [ $? -eq 0 ]
+then
+        echo UGE is running.
+else
+        echo UGE is not running.
+        echo $message|mail -s "URGENT: UGE/SGE stopped on "`hostname`"!" $email_list
+fi 
+
