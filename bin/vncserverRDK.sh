@@ -13,6 +13,8 @@ else
   grep -E -o ".{0,0}:.{0,3}"  $HOME/vncserverRDK.txt | cut -f1 -d " " | tail -n 1 > $HOME/vncserverNumberRDK.txt
   sed -i 's/\.//' $HOME/vncserverNumberRDK.txt
   sed -i 's/[[:alpha:].-]//g' $HOME/vncserverNumberRDK.txt
+  cp -f $HOME/vncserverNumberRDK.txt /home/$USER/vncserverNumberRDK.txt
+  cp -f $HOME/vncserverRDK.txt /home/$USER/vncserverRDK.txt
  fi
 fi
 
@@ -23,6 +25,8 @@ if [ ! -e $HOME/vncserverNumberRDK.txt ]; then
  grep -E -o ".{0,0}:.{0,3}"  $HOME/vncserverRDK.txt | cut -f1 -d " " | head -n 1 > $HOME/vncserverNumberRDK.txt
  sed -i 's/\.//' $HOME/vncserverNumberRDK.txt
  sed -i 's/[[:alpha:].-]//g' $HOME/vncserverNumberRDK.txt
+ cp -f $HOME/vncserverNumberRDK.txt /home/$USER/vncserverNumberRDK.txt
+ cp -f $HOME/vncserverRDK.txt /home/$USER/vncserverRDK.txt
 else
  echo "VNCSERVER ALREADY EXISTS; DOING NOTHING"
 fi
