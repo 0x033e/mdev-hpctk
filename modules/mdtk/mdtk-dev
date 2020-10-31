@@ -36,7 +36,8 @@ set mdtk_scripts "$mdtk_home/scripts"
 #set mdtk_data "$::env(DATA_SHARED)/mdtk"
 set mdtk_owner "Roger Robinson"
 set user_email "$env(USER)@rms.com"
-
+set mdws_home "$mdtk_home/mdws"
+set mdws_run "$mdws_home/run"
 
 # Export Variables to Enviroment
 setenv MDTK_HOME "$mdtk_home"
@@ -49,12 +50,17 @@ setenv MDTK_SCRIPTS "$mdtk_scripts"
 setenv MDTK_OWNER "$mdtk_owner"
 setenv USER_EMAIL "$user_email"
 setenv MDTK_TMP "/mnt/gpfs/tmp/"
+setenv MDWS_SERVER "ukvmlx-head-05.rms.com"
+setenv MDWS_SERVER_PORT "8091"
+setenv MDWS_HOME "$mdws_home"
+setenv MDWS_RUN "$mdws_run"
 
 #Other Tool Kits
 #setenv TK_BASE "/mnt/gpfs/backup"
 
 #Set Binary Paths
 prepend-path PATH "$mdtk_run"
+prepend-path PATH "$mdws_run"
 
 #Set Libary Paths
 

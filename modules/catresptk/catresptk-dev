@@ -14,36 +14,38 @@ set     version      "1.0"
 
 module-whatis "This module loads the Catresp Tool Kit; this is a tool kit to help Catresp Group members to submit Catresp jobs to the Grid"
 
-#----------------------------------------------------------------------
-#git commands
-set-alias catresptk_get_git   "mkdir -p $env(TK_BASE)/catresp/users/$env(USER)/catresptk; cd $env(TK_BASE)/catresp/users/$env(USER)/catresptk; git clone git@github.com:RMS/catresptk.git $env(TK_BASE)/catresp/users/$env(USER)/catresptk" 
-#puts stderr "Developer Mode"
-puts stderr "Use command catresptk_get_git to download Catresp - Development Kit to $env(TK_BASE)/catresp/users/$env(USER)/catresptk; Enviroment Variables setup from here"
-
-#----------------------------------------------------------------------
 
 
 conflict catresptk
 prereq mdtk
 
 #Set Variables Internally in this Script
-set catresptk_home "$env(TK_BASE)/catresp/users/$env(USER)/catresptk"
+set catresptk_home "$env(TK_BASE)/catresp/$env(USER)/catresptk"
 set catresptk_owner "Sarah Hartley"
 
 
 # Export Variables to Enviroment
 setenv CATRESPTK_HOME "$catresptk_home"
 setenv CATRESPTK_RUN "$catresptk_home/run"
+setenv CATRESPTK_FUNCTIONS "$catresptk_home/functions"
+setenv CATRESPTK_PROCESS "$catresptk_home/process"
 setenv CATRESPTK_BIN "$catresptk_home/bin"
 setenv CATRESPTK_SRC "$catresptk_home/src"
 setenv CATRESPTK_SCRIPTS "$catresptk_home/scripts"
-setenv CATRESPTK_DATA "$catresptk_home/data"
+setenv CATRESPTK_DATA "$env(TK_BASE)/catresp/catresptk_data"
 setenv CATRESPTK_PLATFORMS "$catresptk_home/platforms"
 setenv CATRESPTK_TESTING "$catresptk_home/testing"
 setenv CATRESPTK_OWNER "$catresptk_owner"
-setenv CATRESPTK_USER "$env(TK_BASE)/catresp/users/$env(USER)"
+setenv CATRESPTK_USER "$env(TK_BASE)/catresp/$env(USER)"
 
 #Set Binary Paths
 prepend-path PATH "$catresptk_home/run"
 
 
+#----------------------------------------------------------------------
+#git commands
+set-alias catresptk_get_git   "mkdir -p $catresptk_home; cd $catresptk_home; git clone git@github.com:RMS/mdev-catresptk.git --branch develop $catresptk_home" 
+#puts stderr "Developer Mode"
+puts stderr "Use command catresptk_get_git to download develop branch of Catresp - Development Kit to $catresptk_home; Enviroment Variables setup from here"
+
+#----------------------------------------------------------------------

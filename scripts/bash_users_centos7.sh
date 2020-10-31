@@ -4,6 +4,8 @@
 #    eval `/usr/bin/modulecmd bash $*`
 #}
 
+#echo "PATH=$PATH"
+
 export HPCTK_HOME=/mnt/opt/hpctk
 export HPCTK_BIN=$HPCTK_HOME/bin
 export HPCTK_SCRIPTS=$HPCTK_HOME/scripts
@@ -90,10 +92,17 @@ fi
 
 
 #ENABLE LATEST VERSION OF GIT IF AVAILABLE
-if [ -e /opt/rh/rh-git29/enable ]
+#if [ -e /opt/rh/rh-git29/enable ]
+#then
+# :
+ #source /opt/rh/rh-git29/enable
+#sfi
+
+#ENABLE LATEST VERSION OF GIT IF AVAILABLE
+if [ -e /opt/rh/rh-git218/enable ]
 then
  :
- #source /opt/rh/rh-git29/enable
+ #source /opt/rh/rh-git218/enable
 fi
 
 #if [ -e /mnt/opt/sge/ge-8.5.4/default/common/settings.sh ]
