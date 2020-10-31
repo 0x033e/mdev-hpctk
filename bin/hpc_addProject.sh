@@ -9,3 +9,4 @@ echo "fshare 0" >>$PROJECT_TEMP
 echo "acl NONE" >>$PROJECT_TEMP
 echo "xacl NONE" >>$PROJECT_TEMP
 
+qconf -Aprj $PROJECT_TEMP
