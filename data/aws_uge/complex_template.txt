@@ -1,0 +1,11 @@
+name        COMPLEX
+shortcut    COMPLEX
+type        STR
+relop       <=
+requestable NO
+consumable  NO
+default     0
+urgency     0
+aapre       NO
+affinity    0.000000
+
