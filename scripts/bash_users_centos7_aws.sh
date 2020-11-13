@@ -11,6 +11,9 @@ export HPCTK_BIN=$HPCTK_HOME/bin
 export HPCTK_SCRIPTS=$HPCTK_HOME/scripts
 export HPCTK_MODULES=$HPCTK_HOME/modules
 export TK_BASE="/mnt/opt/gpfs/"
+export MDWS_LIVE_BASE="/opt/tomcat/"
+export MDWS_TOMCATV="apache-tomcat-9.0.39"
+export MDWS_LIVE_="$MDWS_LIVE_BASE/MDWS_TOMCATV/"
 
 #echo $HPCTK_BIN
 if [ -e $HPCTK_BIN ]; then
